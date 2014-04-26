@@ -1,6 +1,6 @@
 #!/bin/bash
 Author:Geekwolf
-savepath='/root/music/1.txt'
+
 #获取频道列表url
 getlisturl='http://fm.baidu.com/dev/api/?tn=playlist&format=json&id='
 
