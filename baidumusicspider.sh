@@ -20,6 +20,6 @@ list_id=`curl -s ${getlisturl}${i}|jq .|grep '"id"'|awk '{print $NF}'`
 	
 	do 
 	   song_NFL=(`curl -s ${getmusicrealurl}${j} |jq .|grep -E "(songName|format|songLink)"|awk -F '"' '{print $4 }'`)
-	   /usr/bin/wget  ${song_NFL[2]}  -O ~/baidumusic/${channel_name[${count}]}/${song_NFL[1]}.${song_NFL[0]}
+	   /usr/bin/wget -q -c ${song_NFL[2]}  -O ~/baidumusic/${channel_name[${count}]}/${song_NFL[1]}.${song_NFL[0]}
 	done
 done
